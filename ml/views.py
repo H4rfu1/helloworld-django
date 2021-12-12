@@ -20,9 +20,12 @@ def index(request):
     return render(request, 'index.html', context)
 
 def predictnab(request):
-    ihsg = request.POST['ihsg']
-    unit = request.POST['unit']
+    ihsg = float(request.POST['ihsg'])
+    unit = float(request.POST['unit'])
     model_path = os.path.join(os.path.dirname(os.path.dirname(__file__)),'my_lstm_model.h5')
     clf = load_model(model_path)
-    data = predictNab(clf, 5299.213, 1141)
-    return JsonResponse(data)
+    result = predictNab(clf, ihsg, unit)
+    print('result = ', result)
+    return JsonResponse({
+        'result': str(result[0])
+    })

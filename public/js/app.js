@@ -15,7 +15,10 @@ $("#submit").click( function () {
     },
     dataType: 'json',
     success: function (data) {
-        alert(data);
+        // alert('Result : ' + data.result);
+        // console.log(data);
+        // console.log(data.result);
+        $('#result').text('Prediksi NAB : ' + data.result)
     }
   });
 });
