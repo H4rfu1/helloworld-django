@@ -114,8 +114,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 3. Install Package on environment
    ```sh
-   pip install django==3.2
-   pip install tensorflow
+   pip install -r requirements.txt
    ```
 4. Start  server
    ```js
