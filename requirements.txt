@@ -1,4 +1,4 @@
-django==3.2.12
+django==3.2.15
 gunicorn
 django-heroku
 tensorflow-cpu==2.7.0
