@@ -2,3 +2,4 @@ django==3.2.12
 gunicorn
 django-heroku
 tensorflow-cpu==2.7.0
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
